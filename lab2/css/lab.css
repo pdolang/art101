@@ -1,9 +1,33 @@
 /* Here we can set styles for this lab page that we don't want to effect others pages */
 
 /* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
-.minor-section {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: solid 1px #888;
-    background-color: #DDD8C4;
-  }
+
+/* color for the heading, paragraph, and image */
+#content {
+  background-color: bisque;
+}
+
+/* color for the paragraph */
+p {
+  color: darkolivegreen;
+  padding-right: 10px;
+  text-indent: 75px;
+  text-align: center;
+  font-size: 115%;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+/* color for the heading & dotted border */
+h1 {
+  color: peru;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border:dotted;
+  text-align: center;
+}
+
+/* center cow image - credit to freeCodeCamp's article "HTML Center Image-CSS Align Img Center Example" */
+#cow-image {
+  display: grid;
+  place-items: center;
+}
