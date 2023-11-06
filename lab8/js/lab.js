@@ -29,7 +29,7 @@ var resultTwo = numberArray.map(function(subtract){
 // Should return [35, -8, -77, 16, -11, 370]
 console.log("Subtracting 5 from array: ", resultTwo);
 
-// Anonymous function + another callback function 
+// Anonymous function & callback function learned through lecture 
 setTimeout(function() {
     console.log("This is a message from Priscella- HI!");
 }, 4000); 
