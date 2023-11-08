@@ -1,0 +1,59 @@
+/* Priscella Dolang */
+/* Lab 9: Libraries & jQuery */
+/* 11/8/23 */
+
+/* Original colored sections */
+.challenge {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: solid 1px #2a405e;
+    background-color: #6fb16d;
+  }
+
+.problems {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: solid 1px #2a405e;
+    background-color: #6fb16d;
+}
+
+.reflection {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: solid 1px #2a405e;
+    background-color: #6fb16d;
+}
+
+.results {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: solid 1px #2a405e;
+    background-color: #6fb16d;
+}
+
+/* Changed colored sections */
+.challengespecial {
+    background-color: blanchedalmond;
+    color: black;
+}
+
+.problemsspecial {
+    background-color: cornflowerblue; 
+    color: blanchedalmond;
+}
+
+.reflectionspecial {
+    background-color: goldenrod;
+    color: black;
+}
+
+.resultsspecial {
+    background-color: black;
+    color: blanchedalmond;
+}
+
+/* Bonus Task Button */
+.bonusbutton {
+    background-color:darkolivegreen;
+    color: honeydew; 
+}
