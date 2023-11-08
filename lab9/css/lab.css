@@ -31,6 +31,13 @@
     background-color: #6fb16d;
 }
 
+.output {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: solid 1px #2a405e;
+    background-color: #6fb16d;
+}
+
 /* Changed colored sections */
 .challengespecial {
     background-color: blanchedalmond;
