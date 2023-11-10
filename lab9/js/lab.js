@@ -34,10 +34,7 @@ $(document).ready(function () {
     $("#content").prepend("<button class='bonus-button'>Fun Button</button>");
 
     $(".bonus-button").click(function () {
-        $(".white-button").toggleClass("bonusbutton");
-        $(".blue-button").toggleClass("bonusbutton");
-        $(".yellow-button").toggleClass("bonusbutton");
-        $(".black-button").toggleClass("bonusbutton");
+        $("button").toggleClass("bonusbutton");
     })
     
 })
