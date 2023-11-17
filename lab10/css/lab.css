@@ -15,3 +15,30 @@
     font-family: sans-serif;
 }
 
+#output {
+    padding: 10px;
+    margin: 10px auto;
+    border: solid 1px #2a405e;
+    background-color: blanchedalmond;
+    border-radius: 15px;
+    min-height: 100px;
+}
+
+/* Bonus Task Credit to Wes Modes: https://wmodes.github.io/art101/lab10/index.html */
+.text:nth-child(odd) {
+    text-align: left;
+}
+
+.text:nth-child(even) {
+    text-align: right;
+}
+
+.text:nth-child(odd) p {
+    color: black;
+    background-color: lightgray;
+}
+
+.text:nth-child(even) p {
+    color: white;
+    background-color: dodgerblue;
+}
