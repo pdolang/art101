@@ -1,4 +1,16 @@
 /* Priscella Dolang */
 /* Lab 10: JavaScript for the Web */
-/* 11/11/23 */
+/* 11/15/23 */
 
+
+/* Credit to Wes Modes: Canvas Page for Lab 10 */
+.text p {
+    display: inline-block;
+    max-width: 60%;
+    margin: 3px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: darkgray;
+    color: white;
+    font-family: sans-serif;
+}

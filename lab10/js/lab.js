@@ -1,27 +1,26 @@
 // index.js - Lab 10: JavaScript for the Web
 // Author: Priscella Dolang
-// Date: 11/11/23
+// Date: 11/16/23
 
-window.onload = function () {
-    var outputEl = document.getElementById("output");
-    console.log("outputEl: ", outputEl)
 
-    var new1El = document.createElement("p");
+// Credit to Wes Modes: Canvas Page for Lab 10 
 
-    new1El.innerHTML = "This text will be red.";
-    new1El.id = "new-one";
-
-    var new2El = document.createElement("p");
-    new1El.id = "new-two";
-
-    new2El.innerHTML = "This text will be purple.";
-
-    outputEl.appendChild(new1El);
-    outputEl.appendChild(new2El);
-
-    new1El.style.color = "red";
-
-    new2El.style.color = "purple";
-
-    outputEl.className = "changed";
+// Function to create random text 
+function generateRandomText() {
+    const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+    const min = 3;
+    const max = 100;
+    const randLen = Math.floor(Math.random() * (max - min + 1)) + min;
+    // Get a random starting index to slice the Loren Ipsum text 
+    const randStart = Math.floor(Math.random() * (text.length - randLen + 1));
+    // Generates random Loren Ipsum text 
+    return text.slice(randStart, randStart + randLen);
 }
+
+// Event listener for button from HTML 
+$("#make-convo").click(function(){
+    // Getting new fake dialogue 
+    const newText = generateRandomText();
+    // Appending the new div to our output div in our HTML file 
+    $("#output").append('<div class="text"><p>' + newText + '</p></div>');
+});
