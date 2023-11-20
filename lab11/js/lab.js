@@ -21,3 +21,22 @@ $("#submit-name").click(function() {
     $("#output").append('<div class="text"><p>Your name: ' + userNameSorted + '</p></div>');
 });
 
+// Bonus Task 2 
+
+// Click listener for color button 
+$("#submit-color").click(function () {
+    const userColor = $("#fav-color").val();
+    $("#output").append('<div class="color"><p>Your favorite color: ' + userColor + '</p></div>');
+});
+
+// Click listener for birthday button
+$("#submit-birth").click(function () {
+    const userBirthDay = $("#birth-day").val();
+    $("#output").append('<div class="date"><p>Your birthday: ' + userBirthDay + '</p></div>');
+});
+
+// Click listener for number button 
+$("#submit-number").click(function () {
+    const userNumber = $("#fav-number").val();
+    $("#output").append('<div class="number"><p>Your favorite number: ' + userNumber + '</p></div>');
+});
