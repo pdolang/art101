@@ -4,3 +4,10 @@
 
 
 /* Credit to Wes Modes: Canvas Page for Lab 12 */
+
+.input-output {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: solid 1px #2a405e;
+    background-color: blanchedalmond;
+}
