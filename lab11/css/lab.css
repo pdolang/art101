@@ -1,0 +1,17 @@
+/* Priscella Dolang */
+/* Lab 11: JavaScript Events and Forms */
+/* 11/19/23 */
+
+#output {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: solid 1px #2a405e;
+    background-color: blanchedalmond;
+}
+
+.text, .color, .date, .number {
+    color: saddlebrown;
+    font-size: 120%;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+}
