@@ -3,7 +3,15 @@
 // Date: 11/23/23
 
 
-// Credit to Wes Modes: Canvas Page for Lab 12
+// Credit to Wes Modes: Canvas Page for Lab 1
+
+// Array of the descriptions for each of the houses credit to Wes Modes
+descriptionArray = [
+    "A Gryffindor values 'bravery, daring, nerve, and chivalry.' Those sorted in this house are not always what you may think of as 'brave' (they can be afraid), but they almost always will choose to do the right thing, despite consequences. They are the popular house and all the Potterheads want to be Gryffindor, even if they don't necessarily belong."
+    ,"A Ravenclaw values 'intelligence, knowledge, and wit.' The nerds of Hogwarts, but in the best way. They don't need a wand to disarm you. Their words will cut you to the bone. They are highly intelligent, resourceful, creative, and clever. They're pretty cool and most Potterheads don't mind being sorted into Ravenclaw."
+    ,"A Slytherin values 'ambition, cunning, and resourcefulness.' They are sly and clever in every way. They don't need to be brash to get what they want. They are considered the bullies of Hogwarts and the general all around evil-doers. But there are tons of great Slytherin alumni. We just hear a whole lot about the bad ones."
+    ,"A Hufflepuff values 'hard work, dedication, patience, loyalty, and fair play.' They are generally kind-hearted, diligent, and reliable. But they are also the unpopular house and many Potterheads treat being sorted into Hufflepuff like being worse than getting kissed by a dementor."
+]
 
 // Return Gryffindor, Ravenclaw, Slytherin, and Hufflepuff
 // Dependent on length 
@@ -28,10 +36,33 @@ function sortingHat(str) {
 // Getting the value of user input and running it through sortingHat()
 // Will return a statement with the user's sorted house result 
 var myButton = document.getElementById("button");
+// Click listener for the button
 myButton.addEventListener("click", function() {
     var name = document.getElementById("input").value;
+    // Storing input into a variable 
     var house = sortingHat(name);
-    newText = "<p>The Sorting Hat has sorted you into " + house + "</p>";
+    // Function where it returns the description that corresponds with the appropriate house 
+    function descriptors(x) {
+        if (x == "Gryffindor") {
+            red = descriptionArray.at(0)
+            return red 
+        }
+        else if (x == "Ravenclaw") {
+            blue = descriptionArray.at(1)
+            return blue
+        }
+        else if (x == "Slytherin") {
+            green = descriptionArray.at(2)
+            return green
+        }
+        else if (x == "Hufflepuff") {
+            yellow = descriptionArray.at(3)
+            return yellow 
+        }
+    }
+    // Storing the function's result into a variable 
+    var des = descriptors(house);
+    // Text includes both house and descriptor 
+    newText = "<h3>The Sorting Hat has sorted you into " + house + " !</h3></br>" + des;
     document.getElementById("output").innerHTML = newText;
 })
-
