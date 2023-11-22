@@ -1,0 +1,24 @@
+/* Priscella Dolang */
+/* Lab 13: Loops */
+/* 11/26/23 */
+
+
+/* Credit to Wes Modes: Canvas Page for Lab 13 */
+
+.input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: solid 1px #2a405e;
+    background-color: blanchedalmond;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#output {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: solid 1px #2a405e;
+    background-color: blanchedalmond;
+    font-family:'Courier New', Courier, monospace;
+    /* Credit to w3schools */
+    /* column-count: 7; */
+}

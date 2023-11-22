@@ -3,7 +3,7 @@
 // Date: 11/23/23
 
 
-// Credit to Wes Modes: Canvas Page for Lab 1
+// Credit to Wes Modes: Canvas Page for Lab 12
 
 // Array of the descriptions for each of the houses credit to Wes Modes
 descriptionArray = [
