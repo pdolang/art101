@@ -35,34 +35,29 @@ function sortingHat(str) {
 
 // Getting the value of user input and running it through sortingHat()
 // Will return a statement with the user's sorted house result 
-var myButton = document.getElementById("button");
 // Click listener for the button
-myButton.addEventListener("click", function() {
-    var name = document.getElementById("input").value;
+$("#button").click(function() {
+    var name = $("#input").val();
     // Storing input into a variable 
     var house = sortingHat(name);
     // Function where it returns the description that corresponds with the appropriate house 
     function descriptors(x) {
         if (x == "Gryffindor") {
-            red = descriptionArray.at(0)
-            return red 
+            return descriptionArray[0] 
         }
         else if (x == "Ravenclaw") {
-            blue = descriptionArray.at(1)
-            return blue
+            return descriptionArray[1]
         }
         else if (x == "Slytherin") {
-            green = descriptionArray.at(2)
-            return green
+            return descriptionArray[2]
         }
         else if (x == "Hufflepuff") {
-            yellow = descriptionArray.at(3)
-            return yellow 
+            return descriptionArray[3]
         }
     }
     // Storing the function's result into a variable 
     var des = descriptors(house);
     // Text includes both house and descriptor 
     newText = "<h3>The Sorting Hat has sorted you into " + house + " !</h3></br>" + des;
-    document.getElementById("output").innerHTML = newText;
+    $("#output").html(newText);
 })
