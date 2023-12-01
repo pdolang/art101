@@ -59,7 +59,8 @@ function fizzBuzzBoom(maxNums, factorObj) {
 
 // Error Code when not all values needed are inputted 
 function reportError(str) {
-    outputEl.html = "<div class='error'>" + str + "</div>";
+    // outputEl.html = "<div class='error'>" + str + "</div>";
+    outputEl.html("<div class='error>" + str + "</div");
 }
 
 // Click listener 
@@ -77,7 +78,8 @@ $("#submit").click(function() {
         return;
     }
     // Clear error if there is one
-    outputEl.html = "";
+    // outputEl.html = "";
+    outputEl.html("");
     fizzBuzzBoom(max, factorObj);
     outputEl.addClass("cols");
 });
