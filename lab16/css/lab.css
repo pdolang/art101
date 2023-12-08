@@ -1,0 +1,16 @@
+/* Priscella Dolang */
+/* Lab 16: JSON and APIs */
+/* 12/7/23 */
+
+#comic-display {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: solid 1px #2a405e;
+    background-color: blanchedalmond;
+    font-family:'Courier New', Courier, monospace;
+}
+
+img {
+    height: auto;
+    max-width: 100%
+}

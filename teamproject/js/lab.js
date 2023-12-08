@@ -1,38 +1,27 @@
-// script.js
 
-const tweets = [
-    {
-        user: 'Kanye West',
-        image: 'img/yetweet1.jpg',
-    },
-    {
-        user: 'Ye',
-        image: 'img/yetweet2.jpg',
-    },
-    {
-        user: 'Ye',
-        image: 'img/elontweet1.png',
-    },
-    {
-        user: 'Ye',
-        image: 'img/gretavtate.png',
-    },
-    // Add more tweets as needed
-];
 
-let currentTweetIndex = 0;
+document.addEventListener("DOMContentLoaded", function () {
+    const colorChangeBtn = document.getElementById("colorChangeBtn");
 
-function showNextTweet() {
-    const tweetElement = document.getElementById('tweet');
-    const nextTweet = tweets[currentTweetIndex];
+    colorChangeBtn.addEventListener("click", changeColors);
 
-    tweetElement.innerHTML = `
+    function changeColors() {
+        const body = document.body;
+        const h1 = document.querySelector("h1");
 
-        <div class="tweet-content">
-            <!-- Display the tweet image with width and height styles -->
-            <img src="${nextTweet.image}" alt="Tweet Image" style="width: 100%; height: auto;">
-        </div>
-    `;
+        // Example color values, replace with your desired colors
+        const backgroundColor = getRandomColor();
+        const textColor = getRandomColor();
+        const headingColor = getRandomColor();
 
-    currentTweetIndex = (currentTweetIndex + 1) % tweets.length;
-}
+        // Update CSS styles
+        body.style.backgroundColor = backgroundColor;
+        body.style.color = textColor;
+        h1.style.color = headingColor;
+    }
+
+    function getRandomColor() {
+        // Generate a random hex color code
+        return "#" + Math.floor(Math.random()*16777215).toString(16);
+    }
+});
