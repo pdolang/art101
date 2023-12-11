@@ -1,17 +1,368 @@
 /* css */
 
+/* MAIN BODY OF WEBSITE */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Default background color */
-    color: #333; /* Default text color */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    display: flex;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* OPENING SCREEN */
+.welcome-section {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    overflow: hidden;
+    z-index: 9999; /* Ensure it appears above other elements */
+}
+
+.welcome-section .content-wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.welcome-section .content-wrap .fly-in-text {
+    list-style: none;
+}
+
+.welcome-section .content-wrap .fly-in-text li {
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 3em !important; /* Adjust the font size as needed */
+    color: #fff;
+    opacity: 1;
+    transition: all 2s ease;
+}
+
+.welcome-section.show-gif .content-wrap .fly-in-text li {
+    opacity: 0; /* Make it invisible when the show-gif class is applied */
+}
+
+.welcome-section .content-wrap .fly-in-text li:last-child {
+    margin-right: 0;
+}
+
+.welcome-section .content-wrap .enter-button {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #adff2f;
+    opacity: 1;
+    transition: all 1s ease 2s;
+}
+
+.welcome-section.content-hidden .content-wrap .fly-in-text li {
+    opacity: 0;
+}
+
+.welcome-section.content-hidden .content-wrap .fly-in-text li:nth-child(1) {
+    transform: translate3d(-100px, 0, 0);
+}
+
+.welcome-section.content-hidden .content-wrap .fly-in-text li:nth-child(2) {
+    transform: translate3d(100px, 0, 0);
+}
+
+.welcome-section.content-hidden .content-wrap .enter-button {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+}
+
+@media (min-width: 800px) {
+    .welcome-section .content-wrap .fly-in-text li {
+        font-size: 10em;
+    }
+    .welcome-section .content-wrap .enter-button {
+        font-size: 1.5em;
+    }
+}
+
+.welcome-section .content-wrap .welcome-gif {
+    display: none;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.welcome-section.show-gif .content-wrap .fly-in-text,
+.welcome-section.show-gif .content-wrap .enter-button {
+    display: none;
+}
+
+.welcome-section.show-gif .content-wrap .welcome-gif {
+    display: block;
+}
+
+#content {
+    margin-left: 250px;
+    padding: 16px;
+    flex: 1;
+}
+
+header {
+    background-color: #0b6c95; 
+    color: white;
+    padding: 10px;
+    margin-top: auto;
+    font-size: 75px;
+    text-indent: 43%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* SIDEBAR TABS */
+#sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #1DADF2;
+    color: white;
+    position: fixed;
+    overflow-x: hidden;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+span {
+    padding: 10px;
+    margin: 10px 0;
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s;
+}
+
+span:hover {
+    background-color: #1174a2;
+}
+
+[data-tab-info] {
+    display: none;
+}
+
+.active[data-tab-info] {
+    display: block;
+}
+
+#userProfile {
+    background-color: #1174a2;
+    padding: 10px;
+    color: white;
+    margin-top: auto;
+    margin-bottom: 25px;
 }
 
 h1 {
-    color: #0066cc; /* Default heading color */
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
-button {
-    padding: 10px;
+.twitterhistory {
+    display: block;
+    margin: 0 auto;
+}
+
+/* User profile picture API */
+#memes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.meme {
+    margin: 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #095575;
+}
+
+.meme img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.dark-mode {
+    background-color: #0d3b50;
+    color: #dcdcdc;
+
+}
+
+/* Homepage */
+.twitter-tweet {
+    display: block;
+    margin: 0 auto;
+}
+
+#changepfp {
+    width: 49%;
+    padding: 3px;
+    margin-bottom: 5px;
+    background-color: #1da1f2;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#colorChange {
+    width: 49%;
+    padding: 3px;
+    margin-bottom: 5px;
+    background-color: #1da1f2;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#user {
+    color: white;
+}
+
+/* history */
+.twitter-img {
+    margin-top: 15px;
+    width: 50%;
+    height: 50%;
+}
+
+#timeline-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    overflow-x: auto;
+}
+
+.tweet {
+    max-width: 400px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.tweet img {
+    max-width: 50%; 
+    height: auto; 
+    display: block; 
+    margin-bottom: 150px; 
+}
+
+/* Tweets Section */
+
+#notes-container {
+    max-width: 600px;
+    width: 80%;
+    margin: 0 auto; /* Center the container horizontally */
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#note-input {
+    width: calc(100% - 30px);
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
     font-size: 16px;
+    box-sizing: border-box;
+}
+
+#save-button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #1da1f2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#save-button:hover {
+    background-color: #0d8cbf;
+}
+
+#notes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#notes-list li {
+    background-color: #9cd1ff;
+    border: 2px solid #ccc;
+    color: #0d3b50; 
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Elon */
+.video-container {
+    text-align: center;
+}
+
+.video-player {
     margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #1DADF2; 
+}
+
+#playButton {
+    width: 50%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #1da1f2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#playButton:hover {
+    background-color: #0d8cbf;
+}
+
+.video-player {
+    margin-top: 10px;
+    text-indent: 80px;
+}
+
+.video-container {
+    text-align: center;
+}
+
+/* Credits */
+#creditContent {
+    text-align: center;
 }

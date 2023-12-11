@@ -1,15 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Changer</title>
-    <link rel="stylesheet" href="css/lab.css">
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Twitter Archive</title>
+  <!-- Lab Specific CSS File -->
+  <link rel="stylesheet" type="text/css" href="css/lab.css">
+  <!-- load jQuery library to make javascript easier (must be above our lab js)-->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <script src ="js/lab.js" defer></script>
+
 </head>
+
 <body>
-    <h1>Welcome to My Website</h1>
-    <button id="colorChangeBtn">Change Colors</button>
-    <script src="js/lab.js"></script>
+    <div class="welcome-section content-hidden">
+        <div class="content-wrap">
+            <ul class="fly-in-text">
+                <li>Welcome to</li>
+                <li>Twitter Archive</li>
+            </ul>
+            <a href="#" class="enter-button">Enter</a>
+            <img src="img/tweeter.gif" alt="Welcome GIF" class="welcome-gif">
+        </div>
+    </div>
+    <header>Twitter Archive</header>
+
+    <div id="sidebar">
+        <span data-tab-value="#home">Home</span>
+        <span data-tab-value="#history">History of Twitter</span>
+        <span data-tab-value="#tweets">Tweets</span>
+        <span data-tab-value="#elon">F*CK ELON</span>
+        <span data-tab-value="#credits">Credits</span>
+        <div id="userProfile">
+            <div id="memes-container"></div>
+            <h2 id="user">@yourusername420</h2>
+            <button id="changepfp">Change PFP</button>
+            <button id="colorChange">Dark Mode</button>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="tabs_tab active" id="home" data-tab-info>
+            <h1>Homepage</h1>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">just setting up my twttr</p>&mdash; jack (@jack) <a href="https://twitter.com/jack/status/20?ref_src=twsrc%5Etfw">March 21, 2006</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Does anyone think global warming is a good thing? I love Lady Gaga. I think she&#39;s a really interesting artist.</p>&mdash; Britney Spears 🌹🚀 (@britneyspears) <a href="https://twitter.com/britneyspears/status/35767743634481152?ref_src=twsrc%5Etfw">February 10, 2011</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">im at knots berry farms n my butts 2 big 2 fit in da seats on ride. ahhhhhh (dats me yellin)</p>&mdash; SHAQ (@SHAQ) <a href="https://twitter.com/SHAQ/status/3435123096?ref_src=twsrc%5Etfw">August 20, 2009</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Always in my heart <a href="https://twitter.com/Harry_Styles?ref_src=twsrc%5Etfw">@Harry_Styles</a> . Yours sincerely, Louis</p>&mdash; Louis Tomlinson (@Louis_Tomlinson) <a href="https://twitter.com/Louis_Tomlinson/status/120620074301267968?ref_src=twsrc%5Etfw">October 2, 2011</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet"><p lang="zxx" dir="ltr"><a href="https://t.co/OQoosKyeJ2">pic.twitter.com/OQoosKyeJ2</a></p>&mdash; Perfectly Cut Screams (@AAAAAGGHHHH) <a href="https://twitter.com/AAAAAGGHHHH/status/1176592262312017920?ref_src=twsrc%5Etfw">September 24, 2019</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">TAke a look, y&#39;all: IMG_4346.jpeg</p>&mdash; Stephen A Smith (@stephenasmith) <a href="https://twitter.com/stephenasmith/status/603384079044759552?ref_src=twsrc%5Etfw">May 27, 2015</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">is meatball an fruit</p>&mdash; Post Malone (@PostMalone) <a href="https://twitter.com/PostMalone/status/1018731670474670080?ref_src=twsrc%5Etfw">July 16, 2018</a>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Challenge accepted! <a href="https://twitter.com/hashtag/bottletopchallenge?src=hash&amp;ref_src=twsrc%5Etfw">#bottletopchallenge</a> <a href="https://t.co/Rygijd6z5W">pic.twitter.com/Rygijd6z5W</a></p>&mdash; Mariah Carey (@MariahCarey) <a href="https://twitter.com/MariahCarey/status/1147895485652525056?ref_src=twsrc%5Etfw">July 7, 2019</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet"><p lang="in" dir="ltr">AAAAAAAAAAAAAHHHHHRHRGRGRGRRRGURBHJB EORWPSOJWPJORGWOIRGWSGODEWPGOHEPW09GJEDPOKSD!!!!!!!!!!!!!!!0924QU8T63095JRGHWPE09UJ0PWHRGW</p>&mdash; Lady Gaga (@ladygaga) <a href="https://twitter.com/ladygaga/status/266036172122365952?ref_src=twsrc%5Etfw">November 7, 2012</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">nightmares are so embarrassing bro like u literally made up a guy and got scared of him</p>&mdash; thomas (Bad Boy arc) 🍌 (@perfectsweeties) <a href="https://twitter.com/perfectsweeties/status/1732950280231096472?ref_src=twsrc%5Etfw">December 8, 2023</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">found the road from the “road work ahead” vine <a href="https://t.co/bkiuxhxbSl">pic.twitter.com/bkiuxhxbSl</a></p>&mdash; rainbolt (@georainbolt) <a href="https://twitter.com/georainbolt/status/1578200936597532672?ref_src=twsrc%5Etfw">October 7, 2022</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I wonder what happened there? RT <a href="https://twitter.com/necolebitchie?ref_src=twsrc%5Etfw">@necolebitchie</a>: Vid Of Solange Attacking JayZ In An Elevator <a href="http://t.co/nS69hQWmb4">http://t.co/nS69hQWmb4</a> <a href="http://t.co/UHwOGShR7s">pic.twitter.com/UHwOGShR7s</a></p>&mdash; I Make it look Easy (@theQspot) <a href="https://twitter.com/theQspot/status/465895896937684992?ref_src=twsrc%5Etfw">May 12, 2014</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">No caption needed lol happy Dramagedon 3.0 folks <a href="https://t.co/sInBQYPV4P">pic.twitter.com/sInBQYPV4P</a></p>&mdash; alexa (@ItDoBeAlexa) <a href="https://twitter.com/ItDoBeAlexa/status/1278034779007574016?ref_src=twsrc%5Etfw">June 30, 2020</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The four horsemen of bad YouTuber apology videos. Colleen Ballinger, James Charles, Shane Dawson, &amp; Laura Lee. <a href="https://t.co/0MqOjfQ6Ti">pic.twitter.com/0MqOjfQ6Ti</a></p>&mdash; Dallas Ryan (@thedallasryan1) <a href="https://twitter.com/thedallasryan1/status/1674449434661515264?ref_src=twsrc%5Etfw">June 29, 2023</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Joe Biden eats ice cream better than you do: <a href="http://t.co/6R0HaTz5OC">http://t.co/6R0HaTz5OC</a> <a href="http://t.co/A2tC8JTm38">pic.twitter.com/A2tC8JTm38</a></p>&mdash; New York Magazine (@NYMag) <a href="https://twitter.com/NYMag/status/520279019523411968?ref_src=twsrc%5Etfw">October 9, 2014</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A sparkling sphere of stars! ⭐<br><br>This <a href="https://twitter.com/hashtag/HubbleFriday?src=hash&amp;ref_src=twsrc%5Etfw">#HubbleFriday</a> view shows the globular star cluster NGC 2210. These stars are bound together by their mutual gravity!<br><br>NGC 2210 is about 11.6 billion years old: <a href="https://t.co/3w1qCRW2N9">https://t.co/3w1qCRW2N9</a> <a href="https://t.co/OsCmnaRS7u">pic.twitter.com/OsCmnaRS7u</a></p>&mdash; Hubble (@NASAHubble) <a href="https://twitter.com/NASAHubble/status/1733173608619311202?ref_src=twsrc%5Etfw">December 8, 2023</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Whats going on with mycareer</p>&mdash; Cher (@cher) <a href="https://twitter.com/cher/status/236855826340532224?ref_src=twsrc%5Etfw">August 18, 2012</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Everything happens so much</p>&mdash; Horse ebooks (@Horse_ebooks) <a href="https://twitter.com/Horse_ebooks/status/218439593240956928?ref_src=twsrc%5Etfw">June 28, 2012</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Food $200<br>Data $150<br>Rent $800<br>Candles $3,600<br>Utility $150<br>someone who is good at the economy please help me budget this. my family is dying</p>&mdash; wint (@dril) <a href="https://twitter.com/dril/status/384408932061417472?ref_src=twsrc%5Etfw">September 29, 2013</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Me sowing: Haha fuck yeah!!! Yes!! <br><br>Me reaping: Well this fucking sucks. What the fuck.</p>&mdash; The Golden Sir (@screaminbutcalm) <a href="https://twitter.com/screaminbutcalm/status/1105577845642878976?ref_src=twsrc%5Etfw">March 12, 2019</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet"><p lang="zxx" dir="ltr"><a href="https://t.co/aZ2JzDf5ai">pic.twitter.com/aZ2JzDf5ai</a></p>&mdash; Chadwick Boseman (@chadwickboseman) <a href="https://twitter.com/chadwickboseman/status/1299530165463199747?ref_src=twsrc%5Etfw">August 29, 2020</a>
+            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+        <div class="tabs_tab" id="history" data-tab-info>
+            <h1>The History of Twitter</h1>
+            <div id="timeline-container">
+                <p> 
+                    2
+                    0
+                    0
+                    6
+                </p>
+                  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">just setting up my twttr</p>&mdash; jack (@jack) <a href="https://twitter.com/jack/status/20?ref_src=twsrc%5Etfw">March 21, 2006</a>
+                </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <p>  2
+                     0
+                     0
+                     7</p1>
+                
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">&quot;Word up!&quot; It is I, the Gray Lady, with a &quot;shoutout&quot; to all my hip young friends. Just wanted you to know I&#39;ve added new specialized feeds.</p>&mdash; The New York Times (@nytimes) <a href="https://twitter.com/nytimes/status/10643701?ref_src=twsrc%5Etfw">March 21, 2007</a>
+                </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                 <p>
+                    2 
+                    0
+                    0
+                    8</p>
+                 <img class="twitter-img"src="img/2008.png" alt="tweet 2008">
+                <p>
+                    2
+                    0
+                    0
+                    9
+                </p>
+                <img class="twitter-img"src="img/tweet 2009.png" alt="tweet 2009 ">
+                <p> 2
+                    0
+                    1
+                    0
+                </p>
+                <img class="twitter-img"src="img/tweet-2010.png" alt="tweet 2010 ">
+                <p>
+                     2
+                     0
+                     1
+                     1
+                </p>
+                <img class="twitter-img"src="img/tweet 2011.png" alt="tweet 2011 ">
+                <p>
+                    2
+                    0
+                    1
+                    2
+                </p>
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;m safely on the surface of Mars. GALE CRATER I AM IN YOU!!! <a href="https://twitter.com/hashtag/MSL?src=hash&amp;ref_src=twsrc%5Etfw">#MSL</a></p>&mdash; Curiosity Rover (@MarsCuriosity) <a href="https://twitter.com/MarsCuriosity/status/232348380431544320?ref_src=twsrc%5Etfw">August 6, 2012</a>
+                </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <p>
+                    2
+                    0
+                    1
+                    3
+                </p>
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">It&#39;s with a heavy heart that we must confirm Paul Walker passed away today in a tragic car accident...MORE: <a href="http://t.co/9hDuJMH99M">http://t.co/9hDuJMH99M</a> - <a href="https://twitter.com/hashtag/TeamPW?src=hash&amp;ref_src=twsrc%5Etfw">#TeamPW</a>
+                </p>&mdash; Paul Walker (@RealPaulWalker) <a href="https://twitter.com/RealPaulWalker/status/406984510367350784?ref_src=twsrc%5Etfw">December 1, 2013</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <p>
+                    2
+                    0
+                    1
+                    4
+                 </p>
+                 
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">If only Bradley&#39;s arm was longer. Best photo ever. <a href="https://twitter.com/hashtag/oscars?src=hash&amp;ref_src=twsrc%5Etfw">#oscars</a> <a href="http://t.co/C9U5NOtGap">pic.twitter.com/C9U5NOtGap</a></p>&mdash; Ellen DeGeneres (@EllenDeGeneres) <a href="https://twitter.com/EllenDeGeneres/status/440322224407314432?ref_src=twsrc%5Etfw">March 3, 2014</a>
+                </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                 <p>
+                    2
+                    0
+                    1
+                    5
+                 </p>
+                 <img class="twitter-img"src="img/tweet 2015.png" alt="tweet 2015 ">
+                <p>
+                    2
+                    0
+                    1
+                    6
+                </p>
+                 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">&quot;To all the little girls watching...never doubt that you are valuable and powerful &amp; deserving of every chance &amp; opportunity in the world.&quot;</p>&mdash; Hillary Clinton (@HillaryClinton) <a href="https://twitter.com/HillaryClinton/status/796394920051441664?ref_src=twsrc%5Etfw">November 9, 2016</a>
+                </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <p>
+                    2
+                    0
+                    1
+                    7
+                </p>
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">HELP ME PLEASE. A MAN NEEDS HIS NUGGS <a href="https://t.co/4SrfHmEMo3">pic.twitter.com/4SrfHmEMo3</a></p>&mdash; Carter Wilkerson (@carterjwm) <a href="https://twitter.com/carterjwm/status/849813577770778624?ref_src=twsrc%5Etfw">April 6, 2017</a>
+                </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <p>
+                    2
+                    0
+                    1
+                    8
+                </p>
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Let&#39;s set a world record together and get the most retweeted tweet on Twitter. Beating the current world record held by Yusaku Maezawa <a href="https://twitter.com/yousuck2020?ref_src=twsrc%5Etfw">@yousuck2020</a> (5.3 million!) <br><br>We got this 🙌 <a href="https://t.co/VkMPwJo9GI">pic.twitter.com/VkMPwJo9GI</a></p>&mdash; World Record Egg (@egg_rt_record) <a href="https://twitter.com/egg_rt_record/status/1084699357528625153?ref_src=twsrc%5Etfw">January 14, 2019</a>
+                </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <p>
+                    2
+                    0
+                    1
+                    8
+                </p>
+                <blockquote class="twitter-tweet"><p lang="qme" dir="ltr"><a href="https://twitter.com/hashtag/InMyFeelingsChallenge?src=hash&amp;ref_src=twsrc%5Etfw">#InMyFeelingsChallenge</a>
+                 <a href="https://twitter.com/hashtag/HopeOnTheStreet?src=hash&amp;ref_src=twsrc%5Etfw">#HopeOnTheStreet</a> <a href="https://t.co/Bm8bxtKsFq">pic.twitter.com/Bm8bxtKsFq</a>
+                </p>&mdash; 방탄소년단 (@BTS_twt) <a href="https://twitter.com/BTS_twt/status/1021325648659296256?ref_src=twsrc%5Etfw">July 23, 2018</a>
+                </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <p>
+                    2
+                    0
+                    2
+                    0
+                 </p>
+                <blockquote class="twitter-tweet"><p lang="zxx" dir="ltr"><a href="https://t.co/aZ2JzDf5ai">pic.twitter.com/aZ2JzDf5ai</a>
+                </p>&mdash; Chadwick Boseman (@chadwickboseman) <a href="https://twitter.com/chadwickboseman/status/1299530165463199747?ref_src=twsrc%5Etfw">August 29, 2020</a></blockquote>
+                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                 <p>
+                    2
+                    0
+                    2
+                    1
+                </p>
+                 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">It’s a new day in America.</p>&mdash; Joe Biden (@JoeBiden) <a href="https://twitter.com/JoeBiden/status/1351897267666608129?ref_src=twsrc%5Etfw">January 20, 2021</a></blockquote> 
+                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <p>
+                    2
+                    0
+                    2
+                    2
+                </p>
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Next I’m buying Coca-Cola to put the cocaine back in</p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1519480761749016577?ref_src=twsrc%5Etfw">April 28, 2022</a>
+                </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <p>
+                    2
+                    0
+                    2
+                    3
+                </p>
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Oh hi lol <a href="https://t.co/pLxkLDu0Qs">pic.twitter.com/pLxkLDu0Qs</a></p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1670234980776132608?ref_src=twsrc%5Etfw">June 18, 2023</a>
+                </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                
+            </div>
+            <img class="twitterhistory" src="img/history1.png" width="1000"><br>
+            <img class="twitterhistory" src="img/history2.png" width="1000"><br>
+            <img class="twitterhistory" src="img/history3.png" width="1000"><br>
+            <img class="twitterhistory" src="img/history4.png" width="1000"><br>
+        </div>
+
+        <div class="tabs_tab" id="tweets" data-tab-info>
+            <h1>Personal Tweets</h1>
+            <div id="notes-container">
+                <input type="text" id="note-input" placeholder="What's happening?">
+                <button id="save-button">Tweet</button>
+                <ul id="notes-list"></ul>
+            </div>
+        </div>
+
+        <div class="tabs_tab" id="elon" data-tab-info>
+            <h1>Elon Musk Sucks</h1>
+            <h2>choose his fate</h2>
+            <div class="video-container">
+                <label>
+                    <input type="radio" name="video" value="space" checked>Space X
+                </label>
+                <label>
+                    <input type="radio" name="video" value="tesla" checked>Tesla
+                </label>
+                <br><button id="playButton">Play</button>
+            </div>
+
+            <div class="video-player">
+
+            </div>
+
+        </div>
+
+        <div class="tabs_tab" id="credits" data-tab-info>
+            <h1>Credits of Twitter Archive</h1>
+            <p id="creditContent">Created by: Priscella Dolang, Maggie Dougherty, Sydney Kim, David Ordonez</p>
+        </div>
+
+    </div>
+
 </body>
 </html>
 
