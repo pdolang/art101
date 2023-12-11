@@ -10,6 +10,27 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.dark-mode {
+    background-color: #333;
+    color: #dcdcdc;
+}
+
+.dark-mode .content {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode-toggle {
+    width: 49%;
+    padding: 3px;
+    margin-bottom: 5px;
+    background-color: #1da1f2;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
 /* OPENING SCREEN */
 .welcome-section {
     position: fixed;
@@ -56,7 +77,7 @@ body {
     font-size: 1em;
     text-decoration: none;
     text-transform: uppercase;
-    color: #adff2f;
+    color: #1DADF2;
     opacity: 1;
     transition: all 1s ease 2s;
 }
@@ -89,9 +110,9 @@ body {
 
 .welcome-section .content-wrap .welcome-gif {
     display: none;
-    max-width: 100%;
-    height: auto;
-    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
 }
 
 .welcome-section.show-gif .content-wrap .fly-in-text,
@@ -165,6 +186,12 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #1DADF2;
+}
+
 .twitterhistory {
     display: block;
     margin: 0 auto;
@@ -218,35 +245,11 @@ h1 {
     font-size: 13px;
 }
 
-#colorChange {
-    width: 49%;
-    padding: 3px;
-    margin-bottom: 5px;
-    background-color: #1da1f2;
-    color: #fff;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-    font-size: 13px;
-}
-
 #user {
     color: white;
 }
 
 /* history */
-.twitter-img {
-    margin-top: 15px;
-    width: 50%;
-    height: 50%;
-}
-
-#timeline-container {
-    display: flex;
-    transition: transform 0.5s ease;
-    overflow-x: auto;
-}
-
 .tweet {
     max-width: 400px;
     box-sizing: border-box;
@@ -263,6 +266,46 @@ h1 {
     height: auto; 
     display: block; 
     margin-bottom: 150px; 
+}
+
+#timeline-container {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    max-width: 80vw; 
+    background-color: #9cd1ff;
+    border: #0d3b50 solid 2px; 
+}
+
+.timeline-item {
+    flex: 0 0 auto; /* Don't grow or shrink, keep fixed width */
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px; /* Add spacing between years */
+    padding: 10px;
+}
+
+.timeline-year {
+    width: 2px;
+    height: 100%;
+    background-color: #ddd;
+    margin-bottom: 10px;
+}
+
+.timeline-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.timeline-content p {
+    margin: 0;
+    font-size: 10px; /* Adjust the font size as needed */
+    line-height: 1.3; /* Adjust the line height as needed */
+}
+
+.twitter-img {
+    max-width: 100%;
+    max-height: 150px;
 }
 
 /* Tweets Section */
@@ -323,43 +366,33 @@ h1 {
 }
 
 /* Elon */
-.video-container {
-    text-align: center;
-}
 
-.video-player {
-    margin-top: 20px;
-}
-
-h2 {
-    text-align: center;
-    color: #1DADF2; 
-}
-
-#playButton {
-    width: 50%;
-    padding: 15px;
+.image-container.musk {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 20px;
+}
+
+img.musk {
+    width: 600px;
+    height: auto;
+    display: none; /* Hide images by default */
+}
+
+.button-container {
+    text-align: center; /* Center buttons horizontally */
+    margin-top: 10px;
+}
+
+button.muskbutton {
+    margin: 10px;
+    padding: 15px;
     background-color: #1da1f2;
     color: #fff;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 18px;
-    margin-top: 20px;
-}
-
-#playButton:hover {
-    background-color: #0d8cbf;
-}
-
-.video-player {
-    margin-top: 10px;
-    text-indent: 80px;
-}
-
-.video-container {
-    text-align: center;
 }
 
 /* Credits */

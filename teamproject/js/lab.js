@@ -66,6 +66,12 @@ function scrollTimeline(direction) {
     timeline.style.transform = translateX('${newPosition}px');
 }
 
+// Dark Mode Function
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+}
+
 // Function for API profile picture
 const memesContainer = $("#memes-container");
 const changepfp = $("#changepfp");
@@ -135,27 +141,10 @@ function saveNote() {
 }
 
 // Elon Musk Tab
-$('#playButton').on('click', function () {
-    playSelection();
+$('.image-container img').hide();
+
+$('button').on('click', function() {
+    const option = $(this).data('option');
+    $('.image-container img').hide();
+    $('#' + option).show();
 });
-
-function playSelection() {
-    // Get the selected video
-    const selectedVideo = $('input[name="video"]:checked').val();
-
-    // Clear existing video players
-    $('.video-player').empty();
-
-    // Create a new video element
-    const videoElement = $('<video>').attr('controls', true);
-
-    // Set the source of the video based on the user's choice
-    if (selectedVideo === 'space') {
-        videoElement.attr('src', 'img/kitty.mp4');
-    } else if (selectedVideo === 'tesla') {
-        videoElement.attr('src', 'img/tweet.mp4');
-    }
-
-    // Append the video element to the container
-    $('.video-player').append(videoElement);
-}
